@@ -1,7 +1,6 @@
 import React from 'react';
 
 const VideoListItem = ({ video }) => {
-    console.log(video)
     const title = video.snippet.title;
     const publishedAt = video.snippet.publishedAt;
     const thumbnails = video.snippet.thumbnails.default.url;
