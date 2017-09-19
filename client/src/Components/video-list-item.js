@@ -1,12 +1,12 @@
 import React from 'react';
 
-const VideoListItem = ({ video }) => {
+const VideoListItem = ({ video,OnvideoClick }) => {
     const title = video.snippet.title;
     const publishedAt = video.snippet.publishedAt;
     const thumbnails = video.snippet.thumbnails.default.url;
     const description = video.snippet.description;
     return (
-        <li>
+        <li onClick={()=> OnvideoClick(video)}>
             <div className="list-group">
                 <a href="#" className="list-group-item list-group-item-action flex-column align-items-start">
                     <div className="d-flex w-100 justify-content-between">
