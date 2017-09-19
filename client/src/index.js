@@ -10,6 +10,7 @@ import YTSearch from 'youtube-api-search'
 /// Components 
 import SearchBar from './Components/searchbar'
 import VideoList from './Components/video-list'
+import VideoDisplay from './Components/video-display'
 /// End Components
 
 /// Class  
@@ -23,9 +24,10 @@ const API_KEY = config.API_KEY
 class App extends Component {
   constructor(props) {
     super(props)
-    this.state = { videos: null };
-    YTSearch({ key: API_KEY, term: 'Hey you pink' }, (videos) => {
-            this.setState({ videos });
+    this.state = { videos: null};
+    YTSearch({ key: API_KEY, term: 'Pink Floyd - "Hey You' }, (videos) => {
+            this.setState({videos});
+            console.log(videos)
     })
 
   }
@@ -35,6 +37,7 @@ class App extends Component {
     return (
       <div>
         <SearchBar />
+        <VideoDisplay video={(this.state.videos ? this.state.videos[0] : null)} />
         <VideoList videos={this.state.videos} />
       </div>
     );

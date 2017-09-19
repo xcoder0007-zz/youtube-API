@@ -3,7 +3,7 @@ import VideoListItem from './video-list-item';
 
 const VideoList = ({videos})=> {
     if(!videos){ 
-        return <h4>Loading .... </h4>;
+        return <div>Loading .... </div>;
         
     }
 
