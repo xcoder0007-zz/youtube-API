@@ -6,20 +6,11 @@ const VideoListItem = ({ video,OnvideoClick }) => {
     const thumbnails = video.snippet.thumbnails.default.url;
     const description = video.snippet.description;
     return (
-        <li onClick={()=> OnvideoClick(video)}>
-            <div className="list-group">
-                <a href="#" className="list-group-item list-group-item-action flex-column align-items-start">
-                    <div className="d-flex w-100 justify-content-between">
-                        <h5 className="mb-1">{title}</h5>
-
-                        <img className="card-img-top" src={thumbnails} alt="Card image cap" />
-                    </div>
-                        <small>{description}</small>
-                </a>
-
-            </div>
-
-        </li>
+        
+                        <li title={description} className="list-group-item" onClick={()=> OnvideoClick(video)}>
+                         <img src={thumbnails} />
+                         <span className="title-video">{title}</span>
+                        </li>
     )
 };
 

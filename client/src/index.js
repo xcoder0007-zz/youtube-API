@@ -27,32 +27,32 @@ class App extends Component {
     this.state = {
       videos: null,
       Selected: null
-        };
-
-    
-    this.Search('Pink Floyd - "Hey You'); // default search term
-
- }
+    };
 
 
-    Search (term){
-    YTSearch({ key: API_KEY, term: term}, (videos) => {
+    this.Search('Pink Floyd - Hey You'); // default search term
+
+  }
+
+
+  Search(term) {
+    YTSearch({ key: API_KEY, term: term }, (videos) => {
       this.setState({
         videos: videos,
         Selected: videos[0]
 
       });
     })
-    }
+  }
 
   render() {
     return (
-      <div>
-        <Searchbar getSearchterm={term => this.Search(term)} />
-        <VideoDisplay video={(this.state.Selected ? this.state.Selected : null)} />
-        <VideoList
-         OnvideoSelect={Selected => this.setState({Selected})}
-         videos={this.state.videos} />
+      <div className="container">
+        <div class="row">
+          <Searchbar getSearchterm={term => this.Search(term)} />
+          <VideoDisplay video={(this.state.Selected ? this.state.Selected : null)} />
+          <VideoList OnvideoSelect={Selected => this.setState({ Selected })} videos={this.state.videos} />
+        </div>
       </div>
     );
   }

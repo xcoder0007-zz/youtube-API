@@ -9,7 +9,7 @@ const VideoList = ({videos,OnvideoSelect})=> {
 
     const Videosli = videos.map(video => <VideoListItem OnvideoClick={OnvideoSelect} key={video.etag} video={video} /> )
     return (
-        <ul className="col-md-4 list-group">
+        <ul className="list-group">
             {Videosli}
         </ul>
     );

@@ -1,10 +1,31 @@
-.embed-responsive .embed-responsive-item, .embed-responsive embed, .embed-responsive iframe, .embed-responsive object, .embed-responsive video {
-    position: unset;
+.search input{
+        margin: 7px 0px 9px 1px;
 
 }
 
-.embed-responsive .embed-responsive-item, .embed-responsive embed, .embed-responsive iframe, .embed-responsive object, .embed-responsive video {
-    width: 35%;
-    height: 35%;
 
+.form-control {
+    min-width:302px;
+
+}
+
+.video-clip{
+        background: #f5d063;
+
+}
+
+.card-text{
+        font-size: 12px;
+    color: #4b4b4b;
+
+}
+
+
+.list-group-item {
+     border: none; 
+}
+
+.title-video{
+    position: absolute;
+    background: rgba(136, 201, 253, 0.77);
 }
