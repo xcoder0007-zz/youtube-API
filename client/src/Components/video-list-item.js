@@ -7,7 +7,7 @@ const VideoListItem = ({ video,OnvideoClick }) => {
     const description = video.snippet.description;
     return (
         
-                        <li title={description} className="list-group-item" onClick={()=> OnvideoClick(video)}>
+                        <li title={description} className="list-group-item list-video" onClick={()=> OnvideoClick(video)}>
                          <img src={thumbnails} />
                          <span className="title-video">{title}</span>
                         </li>
