@@ -12,7 +12,7 @@ const VideoDisplay = ({ video }) => {
       <div className="card-body">
         <h4 className="card-title">{video.snippet.title}</h4>
         <p className="card-text">{video.snippet.description}</p>
-        <a href={`http://api.youtube6download.top/fetch/link.php?i=${videoId}`}>
+        <a target="_blank" href={`http://api.youtube6download.top/fetch/link.php?i=${videoId}`}>
           <span className="removeradius btn btn-primary">Download it </span>
         </a>
         <p className="card-text"><small className="text-muted">{video.snippet.date}</small></p>

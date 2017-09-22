@@ -8,6 +8,7 @@ import YTSearch from 'youtube-api-search'
 /// End NPM 
 
 /// Components 
+import Header from './Components/header'
 import Searchbar from './Components/searchbar'
 import VideoList from './Components/video-list'
 import VideoDisplay from './Components/video-display'
@@ -49,6 +50,7 @@ class App extends Component {
     return (
       <div className="container">
         <div class="row">
+          <Header />
           <Searchbar getSearchterm={term => this.Search(term)} />
           <VideoDisplay video={(this.state.Selected ? this.state.Selected : null)} />
           <VideoList OnvideoSelect={Selected => this.setState({ Selected })} videos={this.state.videos} />

@@ -9,10 +9,7 @@
 
 }
 
-.video-clip{
-        background: #f5d063;
 
-}
 
 .card-text{
         font-size: 12px;
@@ -47,5 +44,38 @@
 }
 
 .video-ul{
-flex-direction: row;
+    flex-direction: initial;
+    width: 72%;
+    overflow-y: scroll;
+    overflow-y: hidden;
+}
+
+.video-ul::-webkit-scrollbar-track
+{
+	background-color:#0275d8;
+}
+
+
+.video-ul::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+.video-ul::-webkit-scrollbar-thumb
+{
+	background-color:#333;
+}
+
+header span:first-child{
+   font-size: 38px;
+    color: orange;
+    margin-right: -6px;
+    font-weight: bolder;
+}
+
+header span:nth-child(2){
+    font-size: 29px;
+    color: #0275d8;
+    font-weight: bolder;
 }
